@@ -1,0 +1,56 @@
+{% extends 'shop/base.html' %}
+{% load static from staticfiles %}
+
+
+
+<title>{% block title %}Купівля насіння та саджанців квітів{% endblock title %}</title>
+
+    {% block content %}
+    
+
+      
+<table class="table">
+
+ <tr>
+ <th>
+  #
+ </th>
+ <th>
+  імя
+ </th>
+ <th>
+  телефон
+ </th>
+ <th>
+  сума
+ </th>
+ </tr>
+ </thead>
+
+<tbody>
+
+{% for order in orders %}
+ <tr>
+
+  <td><a href='{% url 'one_order' order.id %}'>{{ forloop.counter }}</td>
+  <td><a href='{% url 'one_order' order.id %}'>{{ order.name }}</td>
+  <td><a href='{% url 'one_order' order.id %}'>{{ order.number }}</td>
+  <td><a href='{% url 'one_order' order.id %}'>{{ order.total_cost }}</td>
+
+ </tr>
+{% endfor %}
+
+</tbody>
+</table>
+
+
+
+    {% endblock content %}
+
+
+    
+
+
+
+
+    

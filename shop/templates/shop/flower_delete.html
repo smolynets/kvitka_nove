@@ -1,0 +1,16 @@
+{% extends "shop/base.html" %}
+{% load static from staticfiles %}
+{% block meta_title %}Видалення квітки{% endblock meta_title %}
+{% block title %}Видалити квітку{% endblock title %}
+{% block content %}
+<div id='del_confirm'>
+<form action="" method="post">
+{% csrf_token %}
+<p>Ви дійсно хочете видалити квітку "{{ object }}"?</p>
+<input type="submit" value="Так" name="delete_button"
+class="btn btn-danger" />
+<input type="submit" value="Ні" name="no_delete_button"
+class="btn btn-danger" /><br /><br />
+</form>
+</div>
+{% endblock content %}

@@ -1,0 +1,59 @@
+{% extends 'shop/base.html' %}
+{% load static from staticfiles %}
+
+<title>{% block title %}Купівля насіння та саджанців квітів{% endblock title %}</title>
+
+
+    {% block content %}
+    {% if request.GET.status_message %}
+          <div class="alert alert-warning" role="alert">{{ request.GET.status_message }}</div>
+    {% else %}
+    <div class="alert alert-warning">
+       {% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+            В вашому кошику 
+            <a href="{% url "basket" %}">
+                {{ total_items }} од.
+            </a>
+         {% else %}
+              Кошик пустий
+        {% endif %}
+    {% endwith %}
+    {% endif %}
+    </div>
+
+    <!-- Start Main Page Content-->
+    <div class="buy">
+
+    </div>
+    <div class="aticle">
+    {% for fl in flower %}
+    <a href='{% url 'CartAdd' fl.id %}' class="btn btn-primary to_basket">в кошик</a>
+    <div>
+      <div class="title_lot_one"><h1>{{ fl.title }}</h1></div>
+      <p id="text_about">{{ fl.description }}</p>
+          <center>
+      <img src='{{ fl.photo_main.url }}' width='350' height='250' class="big_photo img-thumbnail" id='big_photo'>
+          </center>
+          <center>
+      {% if fl.photo_big %}
+        <img src='{{ fl.photo_big.url }}' width='350' height='250' class="big_photo img-thumbnail" id='big_photo'>
+      {% endif %}
+        </center>
+      </div>
+      {% if user.is_authenticated %}
+      <div class="reg_del_button">
+    <a class='btn btn-primary' href='{% url 'flower_edit' fl.id %}'>редагувати</a>
+    <a class='btn btn-primary' id='del_buttom' href='{% url 'flower_del' fl.id %}'>видалити</a>
+    </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+    {% endblock content %}
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+{% extends 'shop/base.html' %}
+{% load static from staticfiles %}
+
+
+
+<title>{% block title %}Купівля насіння та саджанців квітів{% endblock title %}</title>
+
+    {% block content %}
+    {% if request.GET.status_message %}
+          <div class="alert alert-warning" role="alert">{{ request.GET.status_message }}</div>
+    {% else %}
+    <div class="alert alert-warning">
+       {% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+            В вашому кошику 
+            <a href="{% url "basket" %}">
+                {{ total_items }} од.
+            </a>
+         {% else %}
+              Кошик пустий
+        {% endif %}
+    {% endwith %}
+    {% endif %}
+</div>
+
+{% if user.is_authenticated %}
+<a class='btn btn-primary btn1' href='{% url "flower_add" %}'>додати квітку</a>
+{% endif %}
+    <!-- Start Listing -->
+   <!-- <div class='row main_list'>-->
+   <div class='row col-xs-10 col-xs-offset-1'>
+
+      {% for fl in flowers %}
+             <div class="col-xs-3 lot">
+                <div class="thumbnail">
+                    <img src="{{ fl.photo_main.url }}" alt="">
+                    <div class="title_lot"><h4>{{ fl.title }}</h4></div>
+                    <div class="caption">
+                        <div id='price_buy'>ціна {{ fl.price }} грн</div>
+            <div>
+      <a href='{% url 'CartAdd' fl.id %}' class="btn btn-primary to_basket">в кошик</a>
+            </div>
+            <div id='reade_more'><a href="{% url "one_flower" fl.id %}">Читати 
+більше...</a></div>
+                    </div>
+                </div>
+            </div>
+
+      {% endfor %}
+
+    </div>
+
+
+
+<div class='row col-xs-10 col-xs-offset-1'>
+<nav>
+<ul class="pagination">
+<li><a href="#">&laquo;</a></li>
+
+{% for p in flowers.paginator.page_range %}
+<li {% if flowers.number == p %}class="active"{% endif %}>
+<a href="{% url "main" %}?page={{ p }}&amp;order_by={{ order_by }}&amp;reverse={{ reverse }}">{{ p }}</a>
+</li>
+{% endfor %}
+
+<li><a href="#">&raquo;</a></li>
+</ul>
+</nav>
+</div>
+    {% endblock content %}
+
+
+
+
+
+
+

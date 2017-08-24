@@ -1,0 +1,340 @@
+
+.tab {
+	width: 100%;
+}
+
+.lot {
+	height: 450px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 50px;
+
+}
+
+
+#title{
+	text-align: center;
+	margin-top: 50px;
+}
+
+#sub-header{
+	margin-left: 380px;
+	margin-top: 50px;
+}
+
+
+
+.title_lot{
+	margin-bottom: 20px;
+	margin-top: 30px;
+	text-align: center;
+        height: 20px;
+}
+
+.prise_lot{
+	margin-top: 10px;
+	text-align: center;
+}
+
+#add_buttom{
+	margin-left: 100px;
+	margin-top: 50px;
+}
+
+.aticle{
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+}
+
+.buy{
+	margin-bottom: 30px;
+	margin-left: 200px;
+}
+
+.small_photo{
+	margin-left: 200px;
+	padding: 20px;
+}
+
+.big_photo{
+	margin-bottom: 80px;
+	margin-top: 100px;
+}
+
+.text_about{
+	margin-bottom: 10px;
+	margin-right: 50px;
+	margin-left: 200px;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+body {
+    margin-bottom: 100px;
+}
+footer {
+    width: 95%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+
+}
+
+.buy_main{
+	margin-left: 90px;
+	margin-top: 5px;
+}
+
+#price_buy{
+	margin-top: 20px;
+}
+
+
+#reade_more{
+	margin-top: 20px;
+}
+
+#myformcss{
+	margin-left: 340px;
+	margin-right: 350px;
+}
+
+#basket_title{
+	text-align: center;
+}
+
+#suma{
+	margin-top: 50px;
+	margin-left:370px;
+}
+
+.alert-warning{
+	margin-top: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+#result{
+	margin-left: 350px;
+	margin-top: 50px;
+}
+
+.col-xs-4{
+	margin-top: 20px;
+}
+
+.from_basket{
+	margin-top: 10px;
+}
+
+.to_basket{
+	margin-top: 35px;
+}
+
+.to_buy{
+	margin-left: 400px;
+	margin-top: 30px;
+}
+
+.form-number{
+	margin-left: 370px;
+	margin-top: 20px;
+}
+
+
+#name{
+	margin-left: 330px;
+	margin-right: 370px;
+}
+
+
+#syma{
+	margin-left: 330px;
+	margin-right: 370px;
+}
+
+
+
+#number{
+	margin-left: 330px;
+	margin-right: 370px;
+}
+
+
+
+#body{
+	margin-left: 330px;
+	margin-right: 370px;
+}
+
+
+#button{
+	margin-top: 10px;
+	margin-left: 280px;
+}
+
+
+.order{
+	margin-left: 500px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	font-size: 150%;
+}
+
+
+.btn1{
+	margin-left: 100px;
+}
+
+.add_form{
+	margin-left: 400px;
+}
+
+.form-actions{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+#del_confirm{
+	margin-left: 400px;
+	margin-top: 50px;
+}
+
+
+#registration{
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+
+#log_form{
+	margin-left: 300px;
+	margin-top: 300px;
+}
+
+#login_title{
+	padding-left: 100px;
+	padding-top: 0px;
+}
+
+#log_form{
+	margin-left: 500px;
+	margin-right: 500px;
+}
+
+
+.bb{
+	margin-left: 0px;
+}
+
+
+.reg_del_button{
+	margin-left: 200px;
+	margin-top: 100px;
+}
+
+
+#one_order{
+    margin-left: 500px;
+	margin-right: 500px;
+	margin-top: 100px;
+}
+
+
+.ord_one_col{
+	padding: 20px;
+}
+
+.title_lot_one{
+    margin-bottom: 20px;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.form-add_edit{
+	margin-right: 300px;
+}
+
+#form_confirm{
+	margin-left: 330px;
+	margin-right: 350px;
+	margin-top: 80px;
+}
+
+#confirm_title{
+	margin-left: 150px;
+}
+
+
+.basket_table{
+	margin-left: 430px;
+	margin-right: 400px;
+}
+
+.form_table{
+	margin-left: 90px;
+}
+
+#basket_details{
+	margin-left: 110px;
+}
+
+.price_title{
+	margin-left: 200px;
+}
+
+.one_price{
+	margin-left: 200px;
+}
+
+.one_confirm{
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+#suma_basket{
+	margin-bottom: 20px;
+}
+
+.main_list{
+	margin-left: 10%;
+}
+
+.lot_image{
+	height: 200px;
+    width: 200px;
+}
+
+.after_image{
+	margin-top: 15%;
+}
+
+
+#text_about{
+	margin-bottom: 10px;
+	margin-right: 10%;
+	margin-left: 20%;
+
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+}
+
+
+
+
